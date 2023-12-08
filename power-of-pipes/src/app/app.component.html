@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="input-container">
+    <input type="text" [(ngModel)]="searchTxt" />
+  </div>
+  <div class="header-row">
+    <div class="header-col">Country</div>
+    <div class="header-col">Capital</div>
+  </div>
+  <!-- <div *ngFor="let country of countries | sort: 'name' | search: searchTxt" class="row">
+    <div class="col">{{country.name}}</div>
+    <div class="col">{{ getState(country.id)?.name }}</div>
+  </div> -->
+  <div *ngFor="let country of countries" class="row">
+    <div class="col">{{country.name}}</div>
+    <div class="col">{{ country.id | state }}</div>
+  </div>
+</div>

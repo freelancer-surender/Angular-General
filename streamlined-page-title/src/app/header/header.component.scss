@@ -1,0 +1,30 @@
+header {
+    background-color: #5B5B5B;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #353535;
+    padding: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a.active {
+    color: greenyellow;
+}
+
+nav a:hover {
+    color: orangered;
+}

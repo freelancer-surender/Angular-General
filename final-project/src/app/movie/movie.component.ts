@@ -1,11 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
+import { StarRatingComponent } from '../feature/star-rating/star-rating.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
-  selector: 'app-movie',
-  templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.scss'],
+    selector: 'app-movie',
+    templateUrl: './movie.component.html',
+    styleUrls: ['./movie.component.scss'],
+    standalone: true,
+    imports: [
+        HeaderComponent,
+        StarRatingComponent,
+        DatePipe,
+    ],
 })
 export class MovieComponent implements OnInit {
   type = '';

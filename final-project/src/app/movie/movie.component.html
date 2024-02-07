@@ -42,30 +42,36 @@
   </div>
   <div class="bottom">
     <h4 class="title">Reviews</h4>
-    <div class="reviews" *ngIf="movie?.reviews?.length > 0">
-      <div class="review" *ngFor="let review of movie?.reviews">
-        <div class="review-details">
-          <div class="review-left">
-            <div class="author">{{ review.author }}</div>
-            <div class="author_dt">
-              {{ review.published_on | date: "dd-MMM-YYYY" }}
+    @if (movie?.reviews?.length > 0) {
+      <div class="reviews">
+        @for (review of movie?.reviews; track review) {
+          <div class="review">
+            <div class="review-details">
+              <div class="review-left">
+                <div class="author">{{ review.author }}</div>
+                <div class="author_dt">
+                  {{ review.published_on | date: "dd-MMM-YYYY" }}
+                </div>
+              </div>
+              <div class="review-right">
+                <div class="rating">
+                  <app-star-rating
+                    [rating]="review.rating"
+                    [isReadOnly]="true"
+                  ></app-star-rating>
+                  <span class="rating-value">{{ review.rating }}</span>
+                </div>
+              </div>
             </div>
+            <div class="review-text"></div>
           </div>
-          <div class="review-right">
-            <div class="rating">
-              <app-star-rating
-                [rating]="review.rating"
-                [isReadOnly]="true"
-              ></app-star-rating>
-              <span class="rating-value">{{ review.rating }}</span>
-            </div>
-          </div>
-        </div>
-        <div class="review-text"></div>
+        }
       </div>
-    </div>
-    <div class="reviews" *ngIf="movie?.reviews?.length === 0">
-      <div class="no-reviews">No reviews yet</div>
-    </div>
+    }
+    @if (movie?.reviews?.length === 0) {
+      <div class="reviews">
+        <div class="no-reviews">No reviews yet</div>
+      </div>
+    }
   </div>
 </div>

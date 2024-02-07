@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { StarRatingComponent } from '../feature/star-rating/star-rating.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: true,
+    imports: [HeaderComponent, StarRatingComponent],
 })
 export class HomeComponent implements OnInit {
   trendingMovies: any;

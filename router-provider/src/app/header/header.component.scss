@@ -1,0 +1,22 @@
+.header {
+    width: 100vw;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #4E4187;
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #F8FFE5;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        border-bottom: 4px solid #4E4187;
+        padding-bottom: 5px;
+        &.active {
+            color: #7DDE92;
+            border-bottom: 4px solid #7DDE92;
+        }
+    }
+}

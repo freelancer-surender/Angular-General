@@ -1,0 +1,17 @@
+.header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #242424;
+    a {
+        cursor: pointer;    
+        color: #ededed;
+        text-decoration: none;
+        &:hover {
+            color: #c61c6e;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<div class="nav">
+    <div class="home">
+        <a routerLink="home">Home</a>
+    </div>
+    <div class="nav-item">
+        <a routerLink="user">User</a>
+    </div>
+    <div class="nav-item">
+        <a routerLink="admin">Admin</a>
+    </div>
+    <div class="btn">
+        <button *ngIf="!auth.isLoggedIn" (click)="login()">Login</button>
+        <button *ngIf="auth.isLoggedIn" (click)="logout()">Logout</button>
+    </div>
+</div>

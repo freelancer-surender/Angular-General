@@ -1,0 +1,48 @@
+.nav {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    position: relative;
+    background-color: #272D2D;
+
+    a {
+        text-decoration: none;
+        color: #F6F8FF;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 0 20px;
+
+        &:hover {
+            color: #23CE6B;
+        }
+    }
+
+    .home {
+        position: absolute;
+        left: 30px;
+    }
+
+    .btn {
+        position: absolute;
+        right: 30px;
+
+        button {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 5px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #23CE6B;
+            color: #272D2D;
+            width: 110px;
+
+            &:active {
+                background-color: #077033;
+                color: #F6F8FF;
+            }
+        }
+    }
+}

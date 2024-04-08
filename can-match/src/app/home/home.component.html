@@ -1,0 +1,4 @@
+<div class="container">
+    <button *ngIf="!auth.isLoggedIn" (click)="login()">Login</button>
+    <button *ngIf="auth.isLoggedIn" (click)="logout()">Logout</button>
+</div>

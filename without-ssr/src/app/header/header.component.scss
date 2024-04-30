@@ -1,0 +1,34 @@
+.nav {
+    background-color: #011936;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    width: 100vw;
+}
+
+.nav-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0px 40px;
+    letter-spacing: 3px;
+}
+
+nav a:hover {
+    color: #ffc107;
+}

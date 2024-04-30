@@ -1,0 +1,17 @@
+.container {
+    padding: 100px;
+    text-align: center;
+    position: relative;
+    h1 {
+        margin-bottom: 100px;   
+        font-size: 50px;     
+    }
+    img {
+        width: 1000px;
+    }
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+}

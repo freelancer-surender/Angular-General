@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="item item-{{fruit.id}}" *ngFor="let fruit of fruits">
+        <img [src]="fruit.pic" alt="">
+        <div class="label">{{ fruit.name }}</div>
+    </div>
+    <div class="spinner" *ngIf="isLoading">
+        <app-spinner></app-spinner>
+    </div>
+</div>

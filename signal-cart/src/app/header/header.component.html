@@ -1,0 +1,7 @@
+<div class="header">
+  <div class="header-item" [ngClass]="{active: activeTab === 'fruits'}" (click)="goToFruits()">Fruits</div>
+  <div class="header-item" [ngClass]="{active: activeTab === 'vegetables'}" (click)="goToVegetables()">Vegetables</div>
+  <div class="cart" (click)="openCart()">Cart <img src="assets/cart.png" alt="" /></div>
+  <div class="cart-count">{{ cartService.cart().length }}</div>
+  <div class="points">Points to be earned: {{ points() }}</div>
+</div>

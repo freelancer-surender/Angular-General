@@ -1,0 +1,16 @@
+.add-btn {
+  background-color: #FAA916;
+  color: #1B1B1E;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 6px 16px;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #1B1B1E;
+  box-shadow: 5px 5px 5px #c9c9c9;
+  &:active {
+    box-shadow: 5px 5px 5px #fff;;
+  }
+}

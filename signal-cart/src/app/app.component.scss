@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    .cart {
+        width: auto;
+        position: fixed;
+        right: -410px;
+        top: 100px;
+        transition: right 0.5s;
+        &.open {
+            right: 10px;
+        }
+    }
+}

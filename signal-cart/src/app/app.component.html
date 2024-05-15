@@ -1,0 +1,8 @@
+<div class="container">
+  <app-header></app-header>
+  <!-- <div class="cart" [ngClass]="{open: cartService.showCart | async}"> -->
+  <div class="cart" [ngClass]="{open: cartService.showCart()}">
+    <app-cart></app-cart>
+  </div>  
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,30 @@
+<div class="cart-container">
+    <div class="cart-header">
+        <div class="heading">Cart</div>
+        <div class="close" (click)="closeCart()">x</div>
+    </div>
+    <div class="cart-body">
+        <div class="cart-items" *ngIf="finalCart.length > 0">
+            <div class="cart-item-header">
+                <div class="item-name detail">Item</div>
+                <div class="item-name qty">Quantity</div>
+                <div class="item-name price">Price</div>
+            </div>
+            <div class="cart-item" *ngFor="let item of finalCart">
+                <div class="detail">
+                    <div class="name">{{ item.name }}</div>
+                    <div class="price">Price: {{ item.price }}</div>
+                </div>
+                <div class="qty">{{ item.qty }}</div>
+                <div class="price">{{ item.price * item.qty }}</div>
+            </div>
+        </div>
+        <ng-container *ngIf="finalCart.length === 0">
+            <div class="empty">No items added in cart</div>
+        </ng-container>
+    </div>
+    <div class="cart-footer" *ngIf="finalCart.length > 0">
+        <div>Quantities:&nbsp;&nbsp;&nbsp; {{ totalQty }}</div>
+        <div>Total Price:&nbsp;&nbsp;&nbsp; {{ totalPrice }}</div>
+    </div>
+</div>

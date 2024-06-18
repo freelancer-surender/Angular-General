@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="items">
+    <div class="item title">
+      <div class="name">Product</div>
+      <div class="count">Count</div>
+    </div>
+    <!-- <div class="item" *ngFor="let item of items">
+      <div class="name">{{ item.name }}</div>
+      <div class="count">{{ item.count }}</div>
+    </div>
+    <div class="no-item" *ngIf="items.length === 0">No items available</div> -->
+
+    @for(item of items; track item.id) {
+      <div class="item">
+        <div class="name">{{ item.name }}</div>
+        <div class="count">{{ item.count }}</div>
+      </div>
+    } @empty {
+      <div class="no-item">No items available</div>
+    }
+  </div>
+</div>

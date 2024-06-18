@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  .items {
+    display: block;
+    .item {
+      font-size: 40px;
+      font-weight: bold;
+      display: flex;
+      .name {
+        width: 300px;
+      }
+      &.title {
+        color: red;
+        margin-bottom: 15px;
+      }
+    }
+    .no-item {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.container {
+  padding: 100px;
+  font-size: 40px;
+  font-weight: bold;
+  .country {
+    margin: 20px;
+  }
+  button {
+    width: 150px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px;
+    border-radius: 4px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: #2f2f2f;
+    color: #fff;
+  }
+}

@@ -1,0 +1,51 @@
+<div class="container">
+  
+  <!-- <div [ngSwitch]="type">
+    <div class="red box" *ngSwitchCase="'red-square'"></div>
+    <div class="red box circle" *ngSwitchCase="'red-circle'"></div>
+    <div class="green box" *ngSwitchCase="'green-square'"></div>
+    <div class="green box circle" *ngSwitchCase="'green-circle'"></div>
+  </div> -->
+
+  @switch (type) {
+    @case ('red-square') {
+      <div class="red box"></div>
+    }
+    @case ('red-circle') {
+      <div class="red box circle"></div>
+    }
+    @case ('green-square') {
+      <div class="green box"></div>
+    }
+    @case ('green-circle') {
+      <div class="green box circle"></div>
+    }
+  }
+  
+  <div class="btns">
+    <button
+      [ngClass]="{ active: type === 'red-circle' }"
+      (click)="draw('red-circle')"
+    >
+      Red Circle
+    </button>
+    <button
+      [ngClass]="{ active: type === 'red-square' }"
+      (click)="draw('red-square')"
+    >
+      Red Square
+    </button>
+    <button
+      [ngClass]="{ active: type === 'green-circle' }"
+      (click)="draw('green-circle')"
+    >
+      Green Circle
+    </button>
+    <button
+      [ngClass]="{ active: type === 'green-square' }"
+      (click)="draw('green-square')"
+    >
+      Green Square
+    </button>
+  </div>
+</div>

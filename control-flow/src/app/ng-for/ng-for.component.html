@@ -1,0 +1,15 @@
+<div class="container"> 
+    <!-- <ul>
+        <ng-container *ngFor="let num of nums">
+            <li *ngIf="num % 2 === 0">{{ num }}</li>
+        </ng-container>        
+    </ul> -->
+
+    <ul>
+        @for(num of nums; track num) {
+            @if(num % 2 === 0) {
+                <li>{{ num }}</li>
+            }            
+        }
+    </ul>
+</div>

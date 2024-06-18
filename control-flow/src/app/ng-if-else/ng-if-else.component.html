@@ -1,0 +1,62 @@
+<div class="container">
+
+  <!-- <ng-container *ngIf="isRed; else green">
+    <div *ngIf="isCircle; else square" class="red box circle"></div>
+    <ng-template #square>
+      <div class="red box"></div>
+    </ng-template>    
+  </ng-container>
+
+  <ng-template #green>
+    <div *ngIf="isCircle; else square" class="green box circle"></div>
+    <ng-template #square>
+      <div class="green box"></div>
+    </ng-template>    
+  </ng-template>   -->
+  
+  @if(isRed) {
+    @if(isCircle) {
+      <div class="red box circle"></div>
+    } @else {
+      <div class="red box"></div>
+    }
+  } @else {
+    @if(isCircle) {
+      <div class="green box circle"></div>
+    } @else {
+      <div class="green box"></div>
+    }
+  }
+
+  <div class="btns">
+
+    <button
+      [ngClass]="{ active: active === 'red-circle' }"
+      (click)="draw('red-circle')"
+    >
+      Red Circle
+    </button>
+
+    <button
+      [ngClass]="{ active: active === 'red-square' }"
+      (click)="draw('red-square')"
+    >
+      Red Square
+    </button>
+
+    <button
+      [ngClass]="{ active: active === 'green-circle' }"
+      (click)="draw('green-circle')"
+    >
+      Green Circle
+    </button>
+
+    <button
+      [ngClass]="{ active: active === 'green-square' }"
+      (click)="draw('green-square')"
+    >
+      Green Square
+    </button>
+    
+  </div>
+</div>

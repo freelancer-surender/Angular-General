@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="countries">
+    <!-- <div class="country" *ngFor="let country of countries; trackBy: trackById">
+      {{ country.name }}
+    </div> -->
+
+    @for(country of countries; track $index) {
+      <div class="country">{{ country.name }}</div>
+    }
+
+  </div>
+  <div class="btn">
+    <button (click)="update()">Update</button>
+  </div>
+</div>

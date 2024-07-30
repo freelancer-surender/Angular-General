@@ -1,0 +1,11 @@
+<div class="container">
+  <div>
+    <input type="number" #numInput />
+  </div>
+
+  <div>
+    <button (click)="calculate(numInput)">Calculate</button>
+  </div>
+
+  <app-square [inputNum]="num" />
+</div>

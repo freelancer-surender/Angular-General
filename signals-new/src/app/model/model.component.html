@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="checkbox">
+    <app-check-box [(value)]="isChecked" />
+
+    <button (click)="toggle()">Toggle</button>
+  </div>
+
+  <div class="dynamic">
+    <span *ngIf="isChecked">Checkbox is checked</span>
+  </div>
+</div>

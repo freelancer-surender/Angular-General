@@ -1,0 +1,26 @@
+<app-box-one />
+<app-box-two #two />
+<app-box-three />
+<app-box-four />
+<!-- @defer (on idle) { -->
+<!-- @defer () { -->
+<!-- @defer (on timer(3s)) { -->
+<!-- @defer (on interaction(two)) { -->
+<!-- @defer (on hover) { -->
+<!-- @defer (on immediate) { -->
+<!-- @defer (on viewport) { -->
+<!-- @defer (on timer(5s); on hover) { -->
+<!-- @defer (when isVisible) { -->
+<!-- @defer (on interaction; prefetch on timer(5s)) { -->
+@defer () {
+    <app-box-five />
+} @placeholder {
+    <app-place-holder />
+} @loading(after 1s; minimum 5s) {
+    <app-spinner />
+} @error {
+    <app-error />
+}
+
+<button (click)="show()">Show</button>
+

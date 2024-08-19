@@ -1,0 +1,60 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 80px;
+  text-align: center;
+  .heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .sub-heading {
+    font-size: 20px;
+    color: #dbdbdb;
+    margin-top: 20px;
+  }
+  .widgets {
+    margin: 75px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    .name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #006ac0;
+      text-transform: uppercase;
+      margin-top: 20px;
+      &.active {
+        color: red;
+      }
+    }
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #013e70;
+    }
+    .features {
+      margin-top: 50px;
+      height: 375px;
+      .feature {
+        font-size: 18px;
+        margin-top: 30px;
+        color: #444444;
+      }
+    }
+    .button {
+      button {
+        background-color: #038eff;
+        color: #fff;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}

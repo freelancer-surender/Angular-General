@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="heading">Plans and Pricing</div>
+  <div class="sub-heading">Choose the plan that best fits you</div>
+  <div class="widgets">
+    <!-- @for (plan of plans; track plan.id) {
+    <app-widget>
+      <div class="name" [ngClass]="{active: plan.id === 3}">{{ plan.name }}</div>
+      <div class="price">{{ plan.price }}</div>
+      <div class="features">
+        @for (feature of plan.features; track $index) {
+        <div class="feature">{{ feature }}</div>
+        }
+      </div>
+    </app-widget>
+    } -->
+
+    <app-widget>
+      <div class="name">{{ plans[0].name }}</div>
+      <div class="price">{{ plans[0].price }}</div>
+      <div class="features">
+        @for (feature of plans[0].features; track $index) {
+        <div class="feature">{{ feature }}</div>
+        }
+      </div>
+      <div class="button">
+        <button>Choose Plan</button>
+      </div>
+    </app-widget>
+
+    <app-widget>
+      <div class="name">{{ plans[1].name }}</div>
+      <div class="price">{{ plans[1].price }}</div>
+      <div class="features">
+        @for (feature of plans[1].features; track $index) {
+        <div class="feature">{{ feature }}</div>
+        }
+      </div>
+      <div class="button">
+        <button>Choose Plan</button>
+      </div>
+    </app-widget>
+
+    <app-widget>
+      <div class="name">{{ plans[2].name }}</div>
+      <div class="price">{{ plans[2].price }}</div>
+      <div class="features">
+        @for (feature of plans[2].features; track $index) {
+        <div class="feature">{{ feature }}</div>
+        }
+      </div>
+      <div class="button">
+        <button>Choose Plan</button>
+      </div>
+    </app-widget>
+
+  </div>
+</div>

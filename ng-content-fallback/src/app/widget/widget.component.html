@@ -1,0 +1,17 @@
+<div class="widget">
+  <ng-content select=".name"></ng-content>
+  <ng-content select=".price"></ng-content>
+  <ng-content select=".features"></ng-content>
+  <!-- <div #btnRef> -->
+    <ng-content select=".button">
+      <div class="button">
+        <button>Choose Plan</button>
+      </div>
+    </ng-content>
+  <!-- </div> -->
+  <!-- @if (!btnRef.hasChildNodes()) {
+    <div class="button">
+      <button>Choose Plan</button>
+    </div>
+  } -->
+</div>

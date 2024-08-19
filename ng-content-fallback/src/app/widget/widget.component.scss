@@ -1,0 +1,19 @@
+.widget {
+  width: 350px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  .button {
+    button {
+      background-color: #011627;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      outline: none;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+}

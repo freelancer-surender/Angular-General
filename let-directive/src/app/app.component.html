@@ -1,0 +1,76 @@
+<!-- <div>{{ salutation }} {{ lastName }}</div>
+<div>{{ salutation }} {{ lastName }}</div>
+<div>{{ salutation }} {{ lastName }}</div>
+<div>{{ salutation }} {{ lastName }}</div>
+<div>{{ salutation }} {{ lastName }}</div>
+<div>{{ salutation }} {{ lastName }}</div> -->
+
+@let fullName = salutation + " " + lastName;
+
+<div>{{ fullName }}</div>
+<div>{{ fullName }}</div>
+<div>{{ fullName }}</div>
+<div>{{ fullName }}</div>
+<div>{{ fullName }}</div>
+<div>{{ fullName }}</div>
+
+<hr>
+
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Total Price</td>
+    </thead>
+    @for (item of cart; track item.id) {
+        @let totalQuantity = item.price * item.quantity;
+        @let isHigh = totalQuantity > 50 ? true : false;
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.quantity }}</td>
+            <!-- <td>{{ item.price * item.quantity }}</td> -->
+             <td [ngClass]="{highlight: isHigh}">{{ totalQuantity }}</td>
+        </tr>
+    }
+</table>
+
+<hr>
+
+@let address = student.details.address;
+
+<div>Permanent Address</div>
+<div>{{ address.permanent.number }}, {{ address.permanent.street }}</div>
+
+<hr>
+
+<div>Contact Address</div>
+<div>{{ address.contact.number }}, {{ address.contact.street }}</div>
+
+<hr>
+
+@let isVotingAllowed = student.age > 18;
+
+@if (isVotingAllowed) {
+    <div>Elligible for voting</div>
+} @else {
+    <div>Not elligible for voting</div>
+}
+
+<hr>
+
+@let msg = student.age > 18 ? "Elligible for voting" : "Not elligible for voting";
+<div>{{ msg }}</div>
+
+<hr>
+
+@let items = items$ | async;
+
+@for (item of items; track $index) {
+    <div>{{ item }}</div>
+}
+
+<hr>
+
+Total items: {{ items?.length }}

@@ -1,0 +1,12 @@
+<div class="widget-container">
+  <div class="title">Movie List</div>
+  <div class="movie-list">
+    @for (movie of movies; track movie.id) {
+    <div class="movie-card">
+      <img [src]="movie.poster" alt="{{ movie.title }}" />
+      <h3>{{ movie.title }}</h3>
+      <button (click)="checkAvailability(movie.id)">Check Availability</button>
+    </div>
+    }
+  </div>
+</div>
